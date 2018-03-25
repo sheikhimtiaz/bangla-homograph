@@ -1,7 +1,7 @@
 var movieFire = angular.module("MovieFire", ["firebase"]);
 
 function MainController($scope, $firebase) {
-    $scope.favMovies = $firebase(new Firebase('https://moviefire.firebaseio.com/movies'));
+    $scope.favMovies = $firebase(new Firebase('https://bangla-homographic-word.firebaseio.com/words'));
     $scope.movies = [];
     $scope.favMovies.$on('value', function() {
         $scope.movies = [];
@@ -47,19 +47,11 @@ function MainController($scope, $firebase) {
             deleteMovieRef.$remove();
         }
     }
-
 }
 
 function buildEndPoint(key, $firebase) {
-    return $firebase(new Firebase('https://moviefire.firebaseio.com/movies/' + key));
+    return $firebase(new Firebase('https://bangla-homographic-word.firebaseio.com/words/' + key));
 }
-
-
-
-
-
-
-
 
 
 function myDropdownFunctionOne() {
@@ -88,7 +80,6 @@ function myDropdownFunctionTwo() {
 // Close the dropdown menu if the user clicks outside of it
 window.onclick = function(event) {
   if (!event.target.matches('.dropbtn')) {
-
     var dropdowns = document.getElementsByClassName("dropdown-content");
     var i;
     for (i = 0; i < dropdowns.length; i++) {
