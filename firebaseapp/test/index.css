@@ -1,0 +1,165 @@
+body { padding-top: 120px; }
+      .navbar-default {
+          background-color: #001E4F;
+          border-color: transparent;
+          -webkit-transition: all 0.5s ease 0s;
+          -o-transition: all 0.5s ease 0s;
+          transition: all 0.5s ease 0s;
+      }
+
+      .navbar-nav {
+          margin-top: 40px;
+          float: right;
+      }
+
+      @media screen and (max-width: 767px) {
+      .navbar-nav {
+          float: none;
+          text-align: center;
+          background: rgba(25, 33, 60, 0.5);
+      }
+      }
+
+      .navbar-default .navbar-brand {
+          margin-top: 40px;
+          font-size: 28px;
+          font-family: 'Righteous', cursive;
+          color:#E04433;
+          letter-spacing: 1px;
+          -moz-transition:color .5s ease-in;
+          -o-transition:color .5s ease-in;
+          -webkit-transition:color .5s ease-in;
+      }
+
+      .navbar-default .navbar-brand span {
+          color:#68696D;
+          -moz-transition:color .5s ease-in;
+          -o-transition:color .5s ease-in;
+          -webkit-transition:color .5s ease-in;
+      }
+
+      @media screen and (max-width: 400px) {
+      .navbar-default .navbar-brand {
+          font-size: 22px;
+      }
+      }
+
+      .navbar-default .navbar-brand:hover, .navbar-default .navbar-brand span:hover {
+          color: #696A6B;
+      }
+
+      .navbar-default .navbar-nav>li>a {
+          color: #fff;
+          font-size: 14px;
+          font-family: 'Noto Sans', sans-serif;
+          text-transform: uppercase;
+          letter-spacing: 1px;
+      }
+
+      .navbar-default .navbar-nav>li>a:hover {
+          color: #696A6B;
+      }
+
+      .navbar-default .navbar-nav>li>a:focus {
+          color: #696A6B;
+      }
+
+      .navbar-default .navbar-toggle {
+          margin-top: 40px;
+          border: none;
+      }
+
+      .navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:hover {
+          background: none;
+      }
+
+      .navbar-default .navbar-toggle .icon-bar {
+          height: 4px;
+          width: 28px;
+          background: #42a5f6;
+      }
+
+      .navbar-default.shrink {
+          background:rgba(25, 33, 60, 0.8)
+      }
+
+      .navbar-default.shrink .navbar-nav {
+          margin-top: 20px;
+          margin-bottom: 10px;
+      }
+
+      .navbar-default.shrink .navbar-brand {
+          margin-top: 20px;
+      }
+
+      .navbar-default.shrink .navbar-toggle {
+          margin-top: 25px;
+      }
+
+
+  </style>
+
+
+ <style>
+form {
+  border: 3px solid #f1f1f1;
+}
+
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+.cancelbtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #f44336;
+}
+
+.imgcontainer {
+  text-align: center;
+  margin: 24px 0 12px 0;
+}
+
+img.avatar {
+  width: 40%;
+  border-radius: 50%;
+}
+
+.container {
+  padding: 16px;
+}
+
+span.psw {
+  float: right;
+  padding-top: 16px;
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+  span.psw {
+     display: block;
+     float: none;
+  }
+  .cancelbtn {
+     width: 100%;
+  }
+}

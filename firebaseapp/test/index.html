@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html ng-app="Homograph">
+
+<head>
+    <title>AI LAB PROJECT</title>
+    <link rel="stylesheet" type="text/css" href="index.css">
+</head>
+
+<body ng-controller="MainController">
+    <h1>Bangla Homograph Word</h1>
+    <h3>List atleast 50 sentences for each meaning of the words.</h3>
+    <hr />
+
+
+      <div class="container col-md-8 col-md-offset-2">
+        <label><b>Word</b></label>
+        <input type="text" placeholder="Enter the word" name="word" required>
+
+
+            <label><b>Meaning #01</b></label>
+        <input type="text" placeholder="Enter a meaning" name="mean_01" required>
+            <label><b>Sentences</b></label>
+        <input type="text" placeholder="Enter a sentence" name="vp_mail" required>
+
+            <label><b>Meaning #02</b></label>
+        <input type="text" placeholder="Enter a meaning" name="mean_02" required>
+            <label><b>Sentences</b></label>
+        <input type="text" placeholder="Enter a sentence" name="vp_mail" required>
+
+            <label><b>Meaning #03</b></label>
+        <input type="text" placeholder="Enter a meaning" name="mean_03" unrequired>
+            <label><b>Sentences</b></label>
+        <input type="text" placeholder="Enter a sentence" name="vp_mail" unrequired>
+
+            <label><b>Meaning #04</b></label>
+        <input type="text" placeholder="Enter a meaning" name="mean_04" unrequired>
+            <label><b>Sentences</b></label>
+        <input type="text" placeholder="Enter a sentence" name="vp_mail" unrequired>
+
+            <label><b>Meaning #05</b></label>
+        <input type="text" placeholder="Enter a meaning" name="mean_05" unrequired>
+            <label><b>Sentences</b></label>
+        <input type="text" placeholder="Enter a sentence" name="vp_mail" unrequired>
+
+
+      </div>
+
+
+
+    <input type="text" id="movieName" placeholder="Enter a Bangla sentence for the above meaning" ng-keypress="saveToList($event)" ng-model="mvName" />
+    <h4>Inserted sentences for the above word - </h4>
+    <ol id="favMovies">
+        <lable ng-hide="movies.length">Loading.. Please wait..</lable>
+        <li ng-repeat="movie in movies">{{movie.name}} [
+            <a href="javascript:" ng-click="edit($index)">Edit</a> |
+            <a href="javascript:" ng-click="del($index)">Delete</a>]
+        </li>
+    </ol>
+
+    <div class="btn-group">
+      <button>SUBMIT</button>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/4.12.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.12.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.12.0/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.12.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.12.0/firebase-messaging.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.12.0/firebase.js"></script>
+
+    <script type='text/javascript' src='https://cdn.firebase.com/js/client/1.0.15/firebase.js'></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.6/angular.min.js"></script>
+    <script src="https://cdn.firebase.com/libs/angularfire/0.7.1/angularfire.min.js"></script>
+
+
+    <script type="text/javascript" src="index.js"></script>
+</body>
+
+</html>
