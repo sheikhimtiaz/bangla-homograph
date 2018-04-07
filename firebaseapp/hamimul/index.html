@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html ng-app="Homograph">
+
+<head>
+    <title>AI LAB PROJECT</title>
+    <link rel="stylesheet" type="text/css" href="index.css">
+</head>
+
+<body ng-controller="MainController">
+    <h1>Bangla Homograph Word</h1>
+    <h3>List atleast 50 sentences for each meaning of the words.</h3>
+    <hr />
+
+
+      <div class="container col-md-8 col-md-offset-2">
+        <h1><label><b>Word</b></label></h1>
+        <input type="text" placeholder="Enter the word" name="word" required>
+
+        <h2 class="w3-text-blue">Meaning 1</h2>
+          <p>instruction</p>
+          <p>
+          <label class="w3-text-blue"><b>Meaning</b></label>
+          <input class="w3-input w3-border" name="first" type="text"></p>
+          <p>
+          <label class="w3-text-blue"><b>Sentance for this meaning</b></label>
+          <input class="w3-input w3-border" name="last" type="text"></p>
+          <p>
+        <button class="w3-btn w3-blue">Add sentance</button></p>
+
+        <h2 class="w3-text-blue">Meaning 2</h2>
+          <p>instruction</p>
+          <p>
+          <label class="w3-text-blue"><b>Meaning</b></label>
+          <input class="w3-input w3-border" name="first" type="text"></p>
+          <p>
+          <label class="w3-text-blue"><b>Sentance for this meaning</b></label>
+          <input class="w3-input w3-border" name="last" type="text"></p>
+          <p>
+        <button class="w3-btn w3-blue">Add sentance</button></p>
+
+        <h2 class="w3-text-blue">Meaning 3</h2>
+          <p>instruction</p>
+          <p>
+          <label class="w3-text-blue"><b>Meaning</b></label>
+          <input class="w3-input w3-border" name="first" type="text"></p>
+          <p>
+          <label class="w3-text-blue"><b>Sentance for this meaning</b></label>
+          <input class="w3-input w3-border" name="last" type="text"></p>
+          <p>
+        <button class="w3-btn w3-blue">Add sentance</button></p>
+
+        <h2 class="w3-text-blue">Meaning 4</h2>
+          <p>instruction</p>
+          <p>
+          <label class="w3-text-blue"><b>Meaning</b></label>
+          <input class="w3-input w3-border" name="first" type="text"></p>
+          <p>
+          <label class="w3-text-blue"><b>Sentance for this meaning</b></label>
+          <input class="w3-input w3-border" name="last" type="text"></p>
+          <p>
+        <button class="w3-btn w3-blue">Add sentance</button></p>
+
+        <h2 class="w3-text-blue">Meaning 5</h2>
+          <p>instruction</p>
+          <p>
+          <label class="w3-text-blue"><b>Meaning</b></label>
+          <input class="w3-input w3-border" name="first" type="text"></p>
+          <p>
+          <label class="w3-text-blue"><b>Sentance for this meaning</b></label>
+          <input class="w3-input w3-border" name="last" type="text"></p>
+          <p>
+        <button class="w3-btn w3-blue">Add sentance</button></p>
+
+
+
+
+      </div>
+
+
+
+    <input type="text" id="movieName" placeholder="Enter a Bangla sentence for the above meaning" ng-keypress="saveToList($event)" ng-model="mvName" />
+    <h4>Inserted sentences for the above word - </h4>
+    <ol id="favMovies">
+        <lable ng-hide="movies.length">Loading.. Please wait..</lable>
+        <li ng-repeat="movie in movies">{{movie.name}} [
+            <a href="javascript:" ng-click="edit($index)">Edit</a> |
+            <a href="javascript:" ng-click="del($index)">Delete</a>]
+        </li>
+    </ol>
+
+    <div class="btn-group">
+      <button class="w3-btn w3-red">Submit</button></p>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/4.12.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.12.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.12.0/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.12.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.12.0/firebase-messaging.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.12.0/firebase.js"></script>
+
+    <script type='text/javascript' src='https://cdn.firebase.com/js/client/1.0.15/firebase.js'></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.6/angular.min.js"></script>
+    <script src="https://cdn.firebase.com/libs/angularfire/0.7.1/angularfire.min.js"></script>
+
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <script type="text/javascript" src="index.js"></script>
+</body>
+
+</html>
