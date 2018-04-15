@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Angular-Formly</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+</head>
+<body ng-app="formlyApp" ng-controller="MainController as vm">
+
+    <div class="container col-md-4 col-md-offset-4">
+        <a href="https://scotch.io/tutorials/easy-angularjs-forms-with-angular-formly">Read the Tutorial by Scotch.io</a>
+
+
+        <form novalidate>
+            <h1>Rent-a-Car, eh?</h1>
+            <formly-form model="vm.rental" fields="vm.rentalFields" form="vm.rentalForm">
+                <button type="submit" class="btn btn-primary" ng-disabled="vm.rentalForm.$invalid">Submit</button>
+            </formly-form>
+        </form>
+
+    </div>
+
+</body>
+
+    <!-- Application Dependencies -->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/api-check/7.2.4/api-check.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.15/angular.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/angular-formly/6.11.0/formly.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/angular-formly-templates-bootstrap/4.3.1/angular-formly-templates-bootstrap.js"></script>
+
+    <!-- Application Scripts -->
+    <script src="app.js"></script>
+    <script src="scripts/MainController.js"></script>
+    <script src="scripts/province.js"></script>
+</html>

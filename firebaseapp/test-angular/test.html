@@ -1,0 +1,95 @@
+<?<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <script src="test.js"></script>
+    <style type="text/css">
+    body{font-size: 1.6em;}
+    .hidden{display:none;}
+    .show{display:inLine !important;}
+    button{
+      border: 2px solid black; backhground: #E5E4E2;
+      font-size: .5em; font-weight: bold; color:black;
+      padding: .8em 2em;
+      margin-top:.4em;
+    }
+    </style>
+  </head>
+  <body>
+    <p id="sayHello"></p>
+<!--
+    <script>
+
+      var customer ={
+        name:"বাংলা",
+        meaning1:"একটি",
+        meaning2:"মহান",
+        meaning3:"ভাষা"
+      };
+      for(k in customer){
+        document.write(customer[k] + "<br />");
+      }
+      var tomSmith= ["sust ","cse ",839.093];
+      document.write("index ",tomSmith[0],"<be />");
+      tomSmith.splice(2,1, "akhalia","sylhet");
+
+      tomSmith.splice(4,1);
+
+      document.write("Array: ", tomSmith.valueOf(), "<br />");
+
+      document.write("Array: ", tomSmith.join(", "), "<br />");
+
+      delete tomSmith[3];
+
+      var numbers=[98,3, 35,536, 322535, 33,6663 ,36363 ,4560];
+      numbers.sort(function(x,y){return x-y});
+      for(k in numbers){
+        document.write(numbers[k],"<br />");
+      }
+      var combinedArray=numbers.concat(tomSmith);
+      for(k in combinedArray){
+        document.write(combinedArray[k],"<br />");
+      }
+
+      var sakil="sakilssss";
+      var customer ={
+        name:"বাংলা",
+        meaning1:sakil
+      };
+      for(k in customer){
+        document.write(customer[k] + "<br />");
+      }
+
+
+    </script>
+-->
+
+
+    <script>
+      angular.module('submitExample', [])
+        .controller('ExampleController', ['$scope', function($scope) {
+          $scope.list = [];
+          $scope.text = 'hello';
+          $scope.submit = function() {
+            if ($scope.text) {
+              $scope.list.push(this.text);
+              $scope.text = '';
+            }
+          };
+        }]);
+    </script>
+    <form ng-submit="submit()" ng-controller="ExampleController">
+      Enter text and hit enter:
+      <input type="text" ng-model="text" name="text" />
+      <input type="submit" id="submit" value="Submit" />
+      <pre>list={{list}}</pre>
+    </form>
+
+
+
+
+
+
+
+  </body>
+</html>
