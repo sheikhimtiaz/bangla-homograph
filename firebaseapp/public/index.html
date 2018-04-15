@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html ng-app="MovieFire">
+<html ng-app="HomoFire">
 
 <head>
     <title>AI LAB PROJECT</title>
@@ -7,33 +7,27 @@
 </head>
 
 <body ng-controller="MainController">
+    <h1>Data Collection</h1>
+    <h3>for</h3>
     <h1>Bangla Homograph Word</h1>
     <h3>List atleast 50 sentences for each meaning of each words.</h3>
     <hr />
 
 
-        <div class="dropdown">
-      <button onclick="myDropdownFunctionOne()" class="dropbtn">গ্রাম</button>
-      <div id="myDropdownOne" class="dropdown-content">
-        <a href="#">Word 1</a>
-        <a href="#">Word 2</a>
-        <a href="#">Word 3</a>
-      </div>
-    </div>
 
-
-        <div class="dropdown">
-      <button onclick="myDropdownFunctionTwo()" class="dropbtn">জনবসতির একটি একক</button>
-      <div id="myDropdownTwo" class="dropdown-content">
-        <a href="#">Meaning 1</a>
-        <a href="#">Meaning 2</a>
-        <a href="#">Meaning 3</a>
-      </div>
-    </div>
-
-
-    <input type="text" id="movieName" placeholder="Enter a Bangla sentence for the above meaning" ng-keypress="saveToList($event)" ng-model="mvName" />
-    <h4>Inserted sentences for the above word - </h4>
+    <input type="text" id="wordName" placeholder="Enter a Word" ng-keypress="saveWMToObject($event)" ng-model="wordName" /> <hr />
+    <input type="text" id="meanOne" placeholder="Enter a meaning!" ng-keypress="saveWMToObject($event)" ng-model="meanOne" />
+    <input type="text" id="senOne" placeholder="Enter sentences for the above meaning" ng-keypress="saveSenOneToObject($event)" ng-model="senOne" /> <hr />
+    <input type="text" id="meanTwo" placeholder="Enter a meaning!" ng-keypress="saveWMToObject($event)" ng-model="meanTwo" />
+    <input type="text" id="senTwo" placeholder="Enter sentences for the above meaning" ng-keypress="saveSenTwoToObject($event)" ng-model="senTwo" /> <hr />
+    <input type="text" id="meanThree" placeholder="Enter a meaning!" ng-keypress="saveWMToObject($event)" ng-model="meanThree" />
+    <input type="text" id="senThree" placeholder="Enter sentences for the above meaning" ng-keypress="saveSenThreeToObject($event)" ng-model="senThree" /> <hr />
+    <input type="text" id="meanFour" placeholder="Enter a meaning!" ng-keypress="saveWMToObject($event)" ng-model="meanFour" />
+    <input type="text" id="senFour" placeholder="Enter sentences for the above meaning" ng-keypress="saveSenFourToObject($event)" ng-model="senFour" /> <hr />
+    <input type="text" id="meanFive" placeholder="Enter a meaning!" ng-keypress="saveWMToObject($event)" ng-model="meanFive" />
+    <input type="text" id="senFive" placeholder="Enter sentences for the above meaning" ng-keypress="saveSenFiveToObject($event)" ng-model="senFive" /> <hr />
+    <input type="text" id="homoName" placeholder="Type DONE and press enter when you are done!" ng-keypress="saveToList($event)" ng-model="hmName" />
+    <h4>Inserted words so far - </h4>
     <ol id="favMovies">
         <lable ng-hide="movies.length">Loading.. Please wait..</lable>
         <li ng-repeat="movie in movies">{{movie.name}} [
