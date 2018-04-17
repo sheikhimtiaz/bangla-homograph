@@ -36,30 +36,61 @@ function MainController($scope, $firebase) {
     });
 
 
-    $scope.saveWMToObject = function(event) {
+    $scope.saveWordToObject = function(event) {
         if (event.which == 13 || event.keyCode == 13) {
             var wrName = $scope.wordName;
             wordName.value = wrName;
             objectForTheWord.word = wrName;
-
-            var mean01 = $scope.meanOne;
-            var mean02 = $scope.meanTwo;
-            var mean03 = $scope.meanThree;
-            var mean04 = $scope.meanFour;
-            var mean05 = $scope.meanFive;
-            meanOne.value=mean01;
-            meanTwo.value=mean02;
-            meanThree.value=mean03;
-            meanFour.value=mean04;
-            meanFive.value=mean05;
-            objectForTheWord.meaning1 = mean01;
-            objectForTheWord.meaning2 = mean02;
-            objectForTheWord.meaning3 = mean03;
-            objectForTheWord.meaning4 = mean04;
-            objectForTheWord.meaning5 = mean05;
+            console.log(wrName);
 
         }
     }
+
+    $scope.saveMeanOneToObject = function(event){
+      if (event.which ==13 || event.keyCode ==13) {
+        var mean01 = $scope.meanOne;
+        meanOne.value=mean01;
+        objectForTheWord.meaning1 = mean01;
+        console.log(mean01);
+      }
+    }
+
+    $scope.saveMeanTwoToObject = function(event){
+      if (event.which ==13 || event.keyCode ==13) {
+        var mean02 = $scope.meanTwo;
+        meanTwo.value=mean02;
+        objectForTheWord.meaning2 = mean02;
+        console.log(mean02);
+      }
+    }
+
+    $scope.saveMeanThreeToObject = function(event){
+      if (event.which ==13 || event.keyCode ==13) {
+        var mean03 = $scope.meanThree;
+        meanThree.value=mean03;
+        objectForTheWord.meaning3 = mean03;
+        console.log(mean03);
+      }
+    }
+
+    $scope.saveMeanFourToObject = function(event){
+      if (event.which ==13 || event.keyCode ==13) {
+        var mean04 = $scope.meanFour;
+        meanFour.value=mean04;
+        objectForTheWord.meaning4 = mean04;
+        console.log(mean04);
+      }
+    }
+
+    $scope.saveMeanFiveToObject = function(event){
+      if (event.which ==13 || event.keyCode ==13) {
+        var mean05 = $scope.meanFive;
+        meanFive.value=mean05;
+        objectForTheWord.meaning5 = mean05;
+        console.log(mean05);
+      }
+    }
+
     $scope.saveSenOneToObject = function(event) {
         if (event.which == 13 || event.keyCode == 13) {
             var tempSen = $scope.senOne;
